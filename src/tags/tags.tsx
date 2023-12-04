@@ -40,9 +40,10 @@ export function Tags() {
         if (unitTypes.includes('air')) {
             unitsData = [...unitsData, ...unitsDataAir];
         }
-        const allUnits = shuffleArray(unitsData);
-        setUnit(allUnits[0]);
-        setUnitOptions(shuffleArray([allUnits[0], allUnits[1], allUnits[2], allUnits[3]]));
+        unitsData = unitsData.filter(u => u.tag !== unit?.tag);
+        unitsData = shuffleArray(unitsData);
+        setUnit(unitsData[0]);
+        setUnitOptions(shuffleArray([unitsData[0], unitsData[1], unitsData[2], unitsData[3]]));
         setCurrentErrorCount(0);
     }
 
