@@ -63,7 +63,7 @@ export function Tags() {
                     tagsElmRef.current?.classList.toggle('pointer-events--none', true);
                     setTimeout(() => {
                         tagsElmRef.current?.classList.toggle('pointer-events--none', false);
-                    }, 1000);
+                    }, 2000);
                 }
                 if (currentErrorCount === 0) {
                     setCorrectAnswerCount((c) => c + 1);
